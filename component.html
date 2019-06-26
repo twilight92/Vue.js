@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-header></app-header>
+        <app-content></app-content>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 
+        전역 컴포넌트 등록
+        Vue.componenet('컴포넌트 이름', 컴포넌트 내용);
+        실제 서비스 만들 땐 전역 컴포넌트 등록할 일 거의 없다.
+        */
+
+        //Root라는 컴포넌트 안에 app-header 컴포넌트 등록
+        Vue.component('app-header', {
+            template: '<h1>Header</h1>'
+        });
+
+        Vue.component('app-content', {
+            template: '<div>content</div>'
+        });
+
+        //인스턴스를 생성하면 개발자 도구에서 Root 컴포넌트로 인식
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>
