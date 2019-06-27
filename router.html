@@ -8,6 +8,12 @@
 </head>
 <body>
     <div id="app">
+        <div>
+            <!-- router-link 태그는 최종적으로 앵커태그로 변환됨 -->
+            <!-- <a href="/login">Login</a> -->
+            <router-link to="/login">Login</router-link>
+            <router-link to="/main">Main</router-link>
+        </div>
         <router-view></router-view>
     </div>
 
