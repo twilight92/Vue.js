@@ -21,12 +21,17 @@
             Loading. . .
         </div>
         <!-- 
-            ------------------------
-            loading이 false일 경우 :
-            ------------------------
-            v-if는 dom을 아예 제거
-            v-show는 css상 display:none처리
-         -->
+        ------------------------
+        loading이 false일 경우 :
+        ------------------------
+        v-if는 dom을 아예 제거
+        v-show는 css상 display:none처리
+        -->
+
+        <!-- 과제 : input박스에 입력된 내용을 p태그에 출력하라 -->
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+       
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -37,7 +42,8 @@
                 num: 10,
                 uuid: 'abc1234',
                 name: 'text-blue',
-                loading: true
+                loading: true,
+                message: ''
             },
             computed: {
                 doubleNum: function(){
